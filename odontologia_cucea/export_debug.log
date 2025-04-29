@@ -1,0 +1,80 @@
+Array
+(
+    [REQUEST] => Array
+        (
+            [odontologo] => 0
+        )
+
+    [TIME] => 2025-04-29 01:50:30
+)
+
+Array
+(
+    [QUERY] => 
+    SELECT 
+        r.fecha_uso,
+        i.nombre as item_nombre,
+        i.categoria,
+        r.cantidad_usada,
+        i.unidad_medida,
+        o.nombre as odontologo_nombre,
+        r.nota
+    FROM RegistroUso r
+    JOIN InventarioDental i ON r.id_item = i.id_item
+    JOIN Odontologo o ON r.id_odontologo = o.id_odontologo
+    WHERE 1=1
+ ORDER BY r.fecha_uso DESC
+    [PARAMS] => Array
+        (
+        )
+
+)
+
+Array
+(
+    [RECORD_COUNT] => 4
+)
+
+Array
+(
+    [REQUEST] => Array
+        (
+            [categoria] => material
+            [odontologo] => 0
+            [fecha_desde] => 2025-04-24
+            [fecha_hasta] => 2025-04-27
+        )
+
+    [TIME] => 2025-04-29 02:47:12
+)
+
+Array
+(
+    [QUERY] => 
+    SELECT 
+        r.fecha_uso,
+        i.nombre as item_nombre,
+        i.categoria,
+        r.cantidad_usada,
+        i.unidad_medida,
+        o.nombre as odontologo_nombre,
+        r.nota
+    FROM RegistroUso r
+    JOIN InventarioDental i ON r.id_item = i.id_item
+    JOIN Odontologo o ON r.id_odontologo = o.id_odontologo
+    WHERE 1=1
+ AND i.categoria = :categoria AND DATE(r.fecha_uso) >= :fecha_desde AND DATE(r.fecha_uso) <= :fecha_hasta ORDER BY r.fecha_uso DESC
+    [PARAMS] => Array
+        (
+            [:categoria] => material
+            [:fecha_desde] => 2025-04-24
+            [:fecha_hasta] => 2025-04-27
+        )
+
+)
+
+Array
+(
+    [RECORD_COUNT] => 0
+)
+
