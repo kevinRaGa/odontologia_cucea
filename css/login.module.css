@@ -1,0 +1,181 @@
+/* Base Styles */
+body {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.login-container {
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added for all screen sizes */
+}
+
+.login-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-bottom: 1.25rem;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.login-form h1 {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.login-form p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.login-form label {
+    color: #495057;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.375rem;
+    display: block;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.alert {
+    padding: 0.625rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.375rem;
+    font-size: 0.85rem;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .login-form {
+        padding: 1.75rem;
+        max-width: 450px; /* Added max-width */
+    }
+    
+    .logo img {
+        height: 48px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .login-form {
+        padding: 2rem;
+        max-width: 500px; /* Kept from original */
+    }
+    
+    .login-form h1 {
+        font-size: 1.625rem;
+    }
+    
+    .login-form p {
+        font-size: 0.9375rem;
+    }
+    
+    .btn-primary {
+        padding: 0.65rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .login-container {
+        padding: 2rem;
+    }
+    
+    .row {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .illustration {
+        display: flex !important;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        align-items: center;
+    }
+    
+    .illustration img {
+        max-height: 400px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .login-form {
+        padding-right: 2rem;
+        max-width: none; /* Remove max-width when side by side */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .illustration img {
+        max-height: 450px;
+    }
+}
